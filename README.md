@@ -17,7 +17,7 @@ Aplicación final: https://www.colsign.com.co/
 ### 1.1 Dataset de videos crudos (`dataset_videos/`)
 
 El dataset fuente es **Colsign‑LSC‑154** (154 etiquetas de la LSC).
-Está publicado en Zenodo: `<DOI pendiente>`.
+Está publicado en Zenodo: `<10.5281/zenodo.20501599>`, https://zenodo.org/records/20501599.
 
 | Característica | Valor |
 |---|---|
