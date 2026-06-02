@@ -1,0 +1,25 @@
+{
+  "model_name": "colsign_lstm_norm_raiz_45_154_v2",
+  "num_classes": 4,
+  "sequence_length": 45,
+  "num_features": 225,
+  "normalize_keypoints": true,
+  "drop_pose_visibility": true,
+  "created_at": "2026-06-01T09:56:49",
+  "id_to_name": {
+    "0": "Grupo Dinámico Bimanual Asimétrico",
+    "1": "Grupo Dinámico Bimanual Simétrico",
+    "2": "Grupo Dinámico Unimanual",
+    "3": "Grupo Estático"
+  },
+  "name_to_id": {
+    "Grupo Dinámico Bimanual Asimétrico": 0,
+    "Grupo Dinámico Bimanual Simétrico": 1,
+    "Grupo Dinámico Unimanual": 2,
+    "Grupo Estático": 3
+  },
+  "extra": {
+    "tipo": "modelo raíz (clasifica grupo morfológico)",
+    "grupos_incluidos": "Grupo Dinámico Bimanual Asimétrico, Grupo Dinámico Bimanual Simétrico, Grupo Dinámico Unimanual, Grupo Estático"
+  }
+}

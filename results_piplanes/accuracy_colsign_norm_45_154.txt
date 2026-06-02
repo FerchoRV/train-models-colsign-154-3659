@@ -1,0 +1,172 @@
+# Evaluación de modelo plano colsign_lstm_norm_45_154
+# Fecha:    2026-06-01T18:04:29
+# Input:    video_path_test_piplane.csv
+# Modelo:   D:\Proyectos\Sistema ILSC\Entrenamiento_modelos_colsign\models\colsign_lstm_norm_45_154_best.keras
+# Duración: 3399.4s (56.66 min)
+
+## Resumen global
+Total videos:      1172
+Aciertos:          1129
+Errores:           43
+Fallos de proceso: 0
+Accuracy:          0.9633  (96.33%)
+
+## Accuracy por clase (sobre el conjunto de test del CSV)
+label                                  ok total     acc
+--------------------------------------------------------
+A veces                                12    12 100.00%
+Abandonar                               8     8 100.00%
+Abrazar                                 9     9 100.00%
+Abuelo                                  9     9 100.00%
+Aburrido                                9     9 100.00%
+Aceptar                                 9     9 100.00%
+Acompañar                               9     9 100.00%
+Acostumbrar                             9     9 100.00%
+Adiós                                   9     9 100.00%
+Agregar                                10    10 100.00%
+Algunos                                 8     8 100.00%
+Allá                                    9     9 100.00%
+Amigo                                   9     9 100.00%
+Aplazar                                10    10 100.00%
+Apoyar                                  9     9 100.00%
+Aprender                                8     8 100.00%
+Aprovechar                              9     9 100.00%
+Aquí                                    8     8 100.00%
+Arreglar                                8     8 100.00%
+Asistir                                 9     9 100.00%
+Ayer                                    8     8 100.00%
+Ayudar                                  8     9  88.89%
+Bien                                    9     9 100.00%
+Buscar                                  8     9  88.89%
+Caminar                                 9     9 100.00%
+Cansancio                               8     8 100.00%
+Castigar                                8     8 100.00%
+Cerca                                   7     7 100.00%
+Cirugía                                 7     7 100.00%
+Confundido                              7     7 100.00%
+Conocer                                 9     9 100.00%
+Contento                                7     7 100.00%
+Continuar                               7     7 100.00%
+Creer                                   7     8  87.50%
+Cuando                                  7     7 100.00%
+Cuidar                                  9     9 100.00%
+Cuál                                    7     7 100.00%
+Cuánto                                  7     7 100.00%
+Cómo                                    7     7 100.00%
+Cómo estás                              8     9  88.89%
+Decidir                                 6     6 100.00%
+Decir                                   5     6  83.33%
+Defender                                6     7  85.71%
+Depender                                6     6 100.00%
+Deprimido                               7     7 100.00%
+Desconcertado                           7     7 100.00%
+Desmayarse                              7     7 100.00%
+Doler                                   7     7 100.00%
+Droguería                               7     7 100.00%
+Dudar                                   6     7  85.71%
+Día                                     7     7 100.00%
+Dónde                                   7     7 100.00%
+El                                      6     7  85.71%
+Ella                                    7     7 100.00%
+Empezar                                 7     7 100.00%
+Encontrar                               7     7 100.00%
+Enfermo                                 7     7 100.00%
+Engañar                                 7     7 100.00%
+Entender                                7     7 100.00%
+Entrar                                  7     7 100.00%
+Escoger                                 7     7 100.00%
+Esperar                                 6     6 100.00%
+Ganar                                   7     7 100.00%
+Gracias                                 6     6 100.00%
+Gripa                                   7     7 100.00%
+Grosero                                 7     7 100.00%
+Gustar                                  7     7 100.00%
+Hablar                                  6     6 100.00%
+Hacer                                   7     7 100.00%
+Hijo                                    7     7 100.00%
+Hola                                    5     6  83.33%
+Hospital                                6     6 100.00%
+Ignorar                                 7     7 100.00%
+Infección                               6     6 100.00%
+Interesar                               7     7 100.00%
+Invitar                                 5     6  83.33%
+Jamás                                   7     7 100.00%
+Lejos                                   6     6 100.00%
+Llevar                                  7     7 100.00%
+Lo siento                               8     8 100.00%
+Mal                                     6     6 100.00%
+Mamá                                    7     7 100.00%
+Mas o menos                             8     8 100.00%
+Miedo                                   6     6 100.00%
+Molestar                                7     7 100.00%
+Mostrar                                 6     7  85.71%
+Mucho                                   7     7 100.00%
+Necesitar                               6     7  85.71%
+No hay                                  8     8 100.00%
+No poder                                7     8  87.50%
+Noche                                   7     7 100.00%
+Nosotros                                7     7 100.00%
+Olvidar                                 6     7  85.71%
+Otra vez                                8     9  88.89%
+Papá                                    7     7 100.00%
+Parecer                                 7     7 100.00%
+Participar                              7     7 100.00%
+Pasear                                  6     6 100.00%
+Pedir                                   7     7 100.00%
+Perdón                                  5     6  83.33%
+Poco                                    6     6 100.00%
+Por favor                               8     8 100.00%
+Por qué                                 9     9 100.00%
+Practicar                               6     6 100.00%
+Preocupar                               6     6 100.00%
+Prestar                                 7     7 100.00%
+Prohibir                                6     6 100.00%
+Querer                                  7     7 100.00%
+Quién                                   6     6 100.00%
+Qué                                     6     6 100.00%
+Qué paso                                8     8 100.00%
+Radiografía                             6     7  85.71%
+Recordar                                6     6 100.00%
+Respetar                                7     7 100.00%
+Responder                               6     6 100.00%
+Saber                                   6     6 100.00%
+Salir                                   7     7 100.00%
+Sano                                    7     7 100.00%
+Siempre                                 7     7 100.00%
+Tener                                   7     7 100.00%
+Trabajar                                6     7  85.71%
+Triste                                  7     7 100.00%
+Tú                                      6     6 100.00%
+Usted                                   7     7 100.00%
+Ustedes                                 7     7 100.00%
+Visitar                                 6     6 100.00%
+Yo                                      7     7 100.00%
+a                                       9    10  90.00%
+b                                       9     9 100.00%
+c                                       9     9 100.00%
+d                                       9     9 100.00%
+e                                       8     9  88.89%
+f                                       8     9  88.89%
+g                                       6     8  75.00%
+h                                       8     8 100.00%
+i                                       9     9 100.00%
+j                                       9     9 100.00%
+k                                       8     9  88.89%
+l                                       8     9  88.89%
+m                                       7     9  77.78%
+n                                       8     9  88.89%
+o                                       9     9 100.00%
+p                                       9     9 100.00%
+q                                       8     9  88.89%
+r                                       8     8 100.00%
+s                                       8     9  88.89%
+t                                       8     9  88.89%
+u                                       6     9  66.67%
+v                                       7     9  77.78%
+w                                       6     9  66.67%
+x                                       8     9  88.89%
+y                                       6     9  66.67%
+z                                       9     9 100.00%
+ñ                                       9     9 100.00%
+--------------------------------------------------------
+TOTAL                                1129  1172  96.33%

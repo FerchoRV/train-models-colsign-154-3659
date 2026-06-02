@@ -1,0 +1,114 @@
+# Entrenamiento ColSign LSTM
+# Modelo: colsign_lstm_norm_bi_simetrico_45_154
+# Fecha:  2026-06-01T09:37:32
+
+## Configuracion
+Dataset HDF5:        dataset_colsign_45_154.h5
+Sequence length:     45
+Num features:        225
+Normalize keypoints: True
+Drop pose visibility:True
+Num classes:         30
+Total samples:       693
+Train samples:       554
+Test  samples:       139
+Test size fraction:  0.2
+Split strategy:      estratificado por clase
+Random seed:         42
+Batch size:          64
+Epochs (config):     300
+Epochs (entrenadas): 114
+Learning rate inic:  0.001
+Dropout rate:        0.2
+Patience EarlyStop:  30
+Patience ReduceLR:   10
+Tiempo entrenamiento:48.8s (0.81 min)
+
+## Info adicional
+tipo: sub-modelo (clasifica seña específica)
+grupo_raiz: Grupo Dinámico Bimanual Simétrico
+modelo_raiz_padre: colsign_lstm_norm_raiz_45_154
+clases_del_grupo: Abandonar, Abrazar, Aceptar, Acompañar, Amigo, Aplazar, Cansancio, Cerca, Confundido, Cuidar, Cuál, Cuánto, Cómo, Cómo estás, Deprimido, Dónde, Engañar, Esperar, Infección, Llevar, Miedo, Mucho, Noche, Prestar, Querer, Radiografía, Sano, Trabajar, Triste, Visitar
+
+## Arquitectura del modelo
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ lstm (LSTM)                          │ (None, 45, 128)             │         181,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 45, 128)             │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ lstm_1 (LSTM)                        │ (None, 64)                  │          49,408 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │           8,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_2 (Dropout)                  │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 30)                  │           3,870 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 728,540 (2.78 MB)
+ Trainable params: 242,846 (948.62 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 485,694 (1.85 MB)
+
+
+## Metricas finales (modelo restaurado al mejor epoch)
+Train loss:     0.0042
+Train accuracy: 1.0000
+Test  loss:     0.1839
+Test  accuracy: 0.9496
+
+## Mejor epoch (segun val_loss)
+Epoch:           84
+Train loss:      0.0233
+Train accuracy:  0.9982
+Val   loss:      0.1839
+Val   accuracy:  0.9496
+
+## Classification report por clase (sobre conjunto de test)
+              precision    recall  f1-score   support
+
+   Abandonar     1.0000    1.0000    1.0000         5
+     Abrazar     1.0000    1.0000    1.0000         6
+     Aceptar     1.0000    1.0000    1.0000         6
+   Acompañar     0.8571    1.0000    0.9231         6
+       Amigo     1.0000    0.8333    0.9091         6
+     Aplazar     1.0000    0.8333    0.9091         6
+   Cansancio     1.0000    1.0000    1.0000         5
+       Cerca     0.8000    1.0000    0.8889         4
+  Confundido     1.0000    1.0000    1.0000         4
+      Cuidar     1.0000    1.0000    1.0000         6
+        Cuál     1.0000    0.7500    0.8571         4
+      Cuánto     1.0000    1.0000    1.0000         4
+        Cómo     1.0000    1.0000    1.0000         4
+  Cómo estás     1.0000    0.8333    0.9091         6
+   Deprimido     1.0000    1.0000    1.0000         4
+       Dónde     1.0000    0.8000    0.8889         5
+     Engañar     1.0000    1.0000    1.0000         5
+     Esperar     0.8000    1.0000    0.8889         4
+   Infección     0.8000    1.0000    0.8889         4
+      Llevar     1.0000    0.8000    0.8889         5
+       Miedo     1.0000    1.0000    1.0000         4
+       Mucho     1.0000    1.0000    1.0000         4
+       Noche     1.0000    1.0000    1.0000         4
+     Prestar     0.6667    1.0000    0.8000         4
+      Querer     1.0000    0.7500    0.8571         4
+ Radiografía     1.0000    1.0000    1.0000         4
+        Sano     0.8000    1.0000    0.8889         4
+    Trabajar     1.0000    1.0000    1.0000         4
+      Triste     1.0000    1.0000    1.0000         4
+     Visitar     1.0000    1.0000    1.0000         4
+
+    accuracy                         0.9496       139
+   macro avg     0.9575    0.9533    0.9499       139
+weighted avg     0.9612    0.9496    0.9501       139
+
+## Archivos generados
+Modelo final:     models\colsign_lstm_norm_bi_simetrico_45_154.keras
+Mejor checkpoint: models\colsign_lstm_norm_bi_simetrico_45_154_best.keras
+Labels JSON:      info_models\colsign_lstm_norm_bi_simetrico_45_154_labels.json
+Loss plot:        graphics\colsign_lstm_norm_bi_simetrico_45_154_loss.jpeg
+Accuracy plot:    graphics\colsign_lstm_norm_bi_simetrico_45_154_accuracy.jpeg

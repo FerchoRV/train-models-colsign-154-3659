@@ -1,0 +1,86 @@
+# Entrenamiento ColSign LSTM
+# Modelo: colsign_lstm_norm_raiz_45_154
+# Fecha:  2026-06-01T09:36:00
+
+## Configuracion
+Dataset HDF5:        dataset_colsign_45_154.h5
+Sequence length:     45
+Num features:        225
+Normalize keypoints: True
+Drop pose visibility:True
+Num classes:         4
+Total samples:       3659
+Train samples:       2927
+Test  samples:       732
+Test size fraction:  0.2
+Split strategy:      estratificado por clase
+Random seed:         42
+Batch size:          64
+Epochs (config):     300
+Epochs (entrenadas): 58
+Learning rate inic:  0.001
+Dropout rate:        0.2
+Patience EarlyStop:  30
+Patience ReduceLR:   10
+Tiempo entrenamiento:111.6s (1.86 min)
+
+## Info adicional
+tipo: modelo raíz (clasifica grupo morfológico)
+grupos_incluidos: Grupo Dinámico Bimanual Asimétrico, Grupo Dinámico Bimanual Simétrico, Grupo Dinámico Unimanual, Grupo Estático
+
+## Arquitectura del modelo
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ lstm (LSTM)                          │ (None, 45, 128)             │         181,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 45, 128)             │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ lstm_1 (LSTM)                        │ (None, 64)                  │          49,408 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │           8,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_2 (Dropout)                  │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 4)                   │             516 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 718,478 (2.74 MB)
+ Trainable params: 239,492 (935.52 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 478,986 (1.83 MB)
+
+
+## Metricas finales (modelo restaurado al mejor epoch)
+Train loss:     0.0472
+Train accuracy: 0.9822
+Test  loss:     0.1776
+Test  accuracy: 0.9440
+
+## Mejor epoch (segun val_loss)
+Epoch:           28
+Train loss:      0.0918
+Train accuracy:  0.9686
+Val   loss:      0.1776
+Val   accuracy:  0.9440
+
+## Classification report por clase (sobre conjunto de test)
+                                    precision    recall  f1-score   support
+
+Grupo Dinámico Bimanual Asimétrico     0.9259    0.9669    0.9459       181
+ Grupo Dinámico Bimanual Simétrico     0.9690    0.8993    0.9328       139
+          Grupo Dinámico Unimanual     0.9614    0.9504    0.9559       262
+                    Grupo Estático     0.9161    0.9467    0.9311       150
+
+                          accuracy                         0.9440       732
+                         macro avg     0.9431    0.9408    0.9414       732
+                      weighted avg     0.9448    0.9440    0.9440       732
+
+## Archivos generados
+Modelo final:     models\colsign_lstm_norm_raiz_45_154.keras
+Mejor checkpoint: models\colsign_lstm_norm_raiz_45_154_best.keras
+Labels JSON:      info_models\colsign_lstm_norm_raiz_45_154_labels.json
+Loss plot:        graphics\colsign_lstm_norm_raiz_45_154_loss.jpeg
+Accuracy plot:    graphics\colsign_lstm_norm_raiz_45_154_accuracy.jpeg

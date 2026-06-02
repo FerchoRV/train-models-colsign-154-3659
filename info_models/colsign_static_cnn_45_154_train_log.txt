@@ -1,0 +1,153 @@
+# Entrenamiento ColSign CNN (señas estáticas, RGB)
+# Modelo: colsign_static_cnn_45_154
+# Fecha:  2026-06-01T11:55:50
+
+## Configuracion
+Crops directorio:    dataset_static_crops_expanded
+Arquitectura:        MobileNetV2 + cabeza Dense + Dropout
+Image size:          128x128 RGB
+Num classes:         27
+Total imágenes:      4438
+Val split:           0.2
+Batch size:          32
+Random seed:         42
+
+## Fase 1 (entrenar solo cabeza, backbone congelado)
+Epochs config:       40
+Epochs entrenados:   40
+Learning rate:       0.001
+Dropout (cabeza):    0.4
+Patience early/lr:   15 / 6
+Duración:            574.7s
+
+## Fase 2 (fine-tuning últimas capas del backbone)
+Epochs config:       40
+Epochs entrenados:   21
+Learning rate:       1e-05
+Capas descongeladas: últimas 30
+Patience early/lr:   20 / 8
+Duración:            383.9s
+
+Duración total:      958.6s (15.98 min)
+
+## Augmentation aplicada
+- RandomFlip horizontal (canonicaliza orientación left/right)
+- RandomRotation ±~10°
+- RandomZoom ±10%
+- RandomContrast ±10%
+- RandomBrightness ±10%
+
+## Arquitectura
+Model: "colsign_static_cnn_45_154"
+┌────────────────────────────────────────────┬─────────────────────────────────
+│ Layer (type)                               │ Output Shape                    
+├────────────────────────────────────────────┼─────────────────────────────────
+│ input_layer (InputLayer)                   │ (None, 128, 128, 3)             
+├────────────────────────────────────────────┼─────────────────────────────────
+│ augmentation (Sequential)                  │ (None, 128, 128, 3)             
+├────────────────────────────────────────────┼─────────────────────────────────
+│ true_divide (TrueDivide)                   │ (None, 128, 128, 3)             
+├────────────────────────────────────────────┼─────────────────────────────────
+│ subtract (Subtract)                        │ (None, 128, 128, 3)             
+├────────────────────────────────────────────┼─────────────────────────────────
+│ mobilenetv2_1.00_128 (Functional)          │ (None, 4, 4, 1280)              
+├────────────────────────────────────────────┼─────────────────────────────────
+│ global_average_pooling2d                   │ (None, 1280)                    
+│ (GlobalAveragePooling2D)                   │                                 
+├────────────────────────────────────────────┼─────────────────────────────────
+│ dropout (Dropout)                          │ (None, 1280)                    
+├────────────────────────────────────────────┼─────────────────────────────────
+│ dense (Dense)                              │ (None, 128)                     
+├────────────────────────────────────────────┼─────────────────────────────────
+│ dropout_1 (Dropout)                        │ (None, 128)                     
+├────────────────────────────────────────────┼─────────────────────────────────
+│ dense_1 (Dense)                            │ (None, 27)                      
+└────────────────────────────────────────────┴─────────────────────────────────
+ Total params: 5,813,139 (22.18 MB)
+ Trainable params: 1,693,851 (6.46 MB)
+ Non-trainable params: 731,584 (2.79 MB)
+ Optimizer params: 3,387,704 (12.92 MB)
+
+
+## Metricas finales (mejores pesos restaurados por EarlyStopping)
+Train loss:     0.2517
+Train accuracy: 0.9344
+Val   loss:     0.2104
+Val   accuracy: 0.9526
+
+## Mejor epoch global (según val_loss): 39/61
+Train loss:     0.3902
+Train accuracy: 0.8713
+Val   loss:     0.1660
+Val   accuracy: 0.9651
+
+## Classification report (validación)
+              precision    recall  f1-score   support
+
+           a     0.0000    0.0000    0.0000         0
+           b     0.0000    0.0000    0.0000         0
+           c     0.0000    0.0000    0.0000         0
+           d     0.0000    0.0000    0.0000         0
+           e     0.0000    0.0000    0.0000         0
+           ñ     0.0000    0.0000    0.0000         0
+           f     0.0000    0.0000    0.0000         0
+           g     0.0000    0.0000    0.0000         0
+           h     0.0000    0.0000    0.0000         0
+           i     0.0000    0.0000    0.0000         0
+           j     0.0000    0.0000    0.0000         0
+           k     0.0000    0.0000    0.0000         0
+           l     0.0000    0.0000    0.0000         0
+           m     0.0000    0.0000    0.0000         0
+           n     0.0000    0.0000    0.0000         0
+           o     0.0000    0.0000    0.0000         0
+           p     0.0000    0.0000    0.0000         0
+           q     0.0000    0.0000    0.0000         0
+           r     0.0000    0.0000    0.0000         0
+           s     0.0000    0.0000    0.0000         0
+           t     0.0000    0.0000    0.0000         0
+           u     0.9714    0.9714    0.9714        35
+           v     0.9663    0.9885    0.9773       174
+           w     0.9935    0.9387    0.9653       163
+           x     1.0000    0.9595    0.9794       173
+           y     1.0000    0.9455    0.9720       165
+           z     0.9880    0.9266    0.9563       177
+
+    accuracy                         0.9526       887
+   macro avg     0.2192    0.2122    0.2156       887
+weighted avg     0.9887    0.9526    0.9701       887
+
+## Conteo por clase
+  a       200
+  b       178
+  c       174
+  d       166
+  e       181
+  ñ       175
+  f       180
+  g       159
+  h       165
+  i       166
+  j       169
+  k       166
+  l       164
+  m       182
+  n         4
+  o       163
+  p       164
+  q       163
+  r       158
+  s       167
+  t       178
+  u       164
+  v       174
+  w       163
+  x       173
+  y       165
+  z       177
+
+## Archivos generados
+Modelo final:     models\colsign_static_cnn_45_154.keras
+Mejor checkpoint: models\colsign_static_cnn_45_154_best.keras
+Labels JSON:      info_models\colsign_static_cnn_45_154_labels.json
+Loss plot:        graphics\colsign_static_cnn_45_154_loss.jpeg
+Accuracy plot:    graphics\colsign_static_cnn_45_154_accuracy.jpeg

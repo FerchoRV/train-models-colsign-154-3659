@@ -1,0 +1,123 @@
+# Entrenamiento ColSign LSTM
+# Modelo: colsign_lstm_norm_bi_asimetrico_45_154
+# Fecha:  2026-06-01T09:36:42
+
+## Configuracion
+Dataset HDF5:        dataset_colsign_45_154.h5
+Sequence length:     45
+Num features:        225
+Normalize keypoints: True
+Drop pose visibility:True
+Num classes:         39
+Total samples:       904
+Train samples:       723
+Test  samples:       181
+Test size fraction:  0.2
+Split strategy:      estratificado por clase
+Random seed:         42
+Batch size:          64
+Epochs (config):     300
+Epochs (entrenadas): 74
+Learning rate inic:  0.001
+Dropout rate:        0.2
+Patience EarlyStop:  30
+Patience ReduceLR:   10
+Tiempo entrenamiento:40.1s (0.67 min)
+
+## Info adicional
+tipo: sub-modelo (clasifica seña específica)
+grupo_raiz: Grupo Dinámico Bimanual Asimétrico
+modelo_raiz_padre: colsign_lstm_norm_raiz_45_154
+clases_del_grupo: A veces, Agregar, Algunos, Apoyar, Aprender, Arreglar, Asistir, Ayudar, Castigar, Cirugía, Conocer, Contento, Continuar, Creer, Defender, Depender, Desconcertado, Droguería, Empezar, Encontrar, Entrar, Gracias, Hablar, Hacer, Ignorar, Invitar, Lejos, Molestar, Mostrar, No poder, Otra vez, Participar, Pasear, Pedir, Perdón, Practicar, Preocupar, Qué, Salir
+
+## Arquitectura del modelo
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ lstm (LSTM)                          │ (None, 45, 128)             │         181,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 45, 128)             │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ lstm_1 (LSTM)                        │ (None, 64)                  │          49,408 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │           8,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_2 (Dropout)                  │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 39)                  │           5,031 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 732,023 (2.79 MB)
+ Trainable params: 244,007 (953.15 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 488,016 (1.86 MB)
+
+
+## Metricas finales (modelo restaurado al mejor epoch)
+Train loss:     0.0528
+Train accuracy: 0.9889
+Test  loss:     0.4076
+Test  accuracy: 0.9227
+
+## Mejor epoch (segun val_loss)
+Epoch:           44
+Train loss:      0.1086
+Train accuracy:  0.9834
+Val   loss:      0.4076
+Val   accuracy:  0.9227
+
+## Classification report por clase (sobre conjunto de test)
+               precision    recall  f1-score   support
+
+      A veces     0.8750    0.8750    0.8750         8
+      Agregar     1.0000    1.0000    1.0000         7
+      Algunos     0.8000    0.8000    0.8000         5
+       Apoyar     1.0000    0.8333    0.9091         6
+     Aprender     0.8333    1.0000    0.9091         5
+     Arreglar     0.8000    0.8000    0.8000         5
+      Asistir     0.8571    1.0000    0.9231         6
+       Ayudar     1.0000    1.0000    1.0000         6
+     Castigar     1.0000    1.0000    1.0000         5
+      Cirugía     0.8333    1.0000    0.9091         5
+      Conocer     1.0000    0.8333    0.9091         6
+     Contento     0.8333    1.0000    0.9091         5
+    Continuar     1.0000    1.0000    1.0000         4
+        Creer     1.0000    0.8000    0.8889         5
+     Defender     0.8000    1.0000    0.8889         4
+     Depender     1.0000    1.0000    1.0000         4
+Desconcertado     1.0000    1.0000    1.0000         4
+    Droguería     1.0000    0.7500    0.8571         4
+      Empezar     0.7500    0.7500    0.7500         4
+    Encontrar     1.0000    1.0000    1.0000         4
+       Entrar     0.7500    0.7500    0.7500         4
+      Gracias     1.0000    1.0000    1.0000         4
+       Hablar     0.7500    0.7500    0.7500         4
+        Hacer     1.0000    1.0000    1.0000         4
+      Ignorar     1.0000    1.0000    1.0000         4
+      Invitar     0.6667    1.0000    0.8000         4
+        Lejos     1.0000    1.0000    1.0000         4
+     Molestar     1.0000    1.0000    1.0000         4
+      Mostrar     1.0000    1.0000    1.0000         4
+     No poder     1.0000    1.0000    1.0000         5
+     Otra vez     0.8000    0.6667    0.7273         6
+   Participar     1.0000    0.7500    0.8571         4
+       Pasear     1.0000    1.0000    1.0000         4
+        Pedir     1.0000    0.7500    0.8571         4
+       Perdón     1.0000    1.0000    1.0000         4
+    Practicar     1.0000    1.0000    1.0000         4
+    Preocupar     1.0000    1.0000    1.0000         4
+          Qué     1.0000    1.0000    1.0000         4
+        Salir     1.0000    1.0000    1.0000         4
+
+     accuracy                         0.9227       181
+    macro avg     0.9320    0.9259    0.9249       181
+ weighted avg     0.9299    0.9227    0.9223       181
+
+## Archivos generados
+Modelo final:     models\colsign_lstm_norm_bi_asimetrico_45_154.keras
+Mejor checkpoint: models\colsign_lstm_norm_bi_asimetrico_45_154_best.keras
+Labels JSON:      info_models\colsign_lstm_norm_bi_asimetrico_45_154_labels.json
+Loss plot:        graphics\colsign_lstm_norm_bi_asimetrico_45_154_loss.jpeg
+Accuracy plot:    graphics\colsign_lstm_norm_bi_asimetrico_45_154_accuracy.jpeg

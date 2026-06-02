@@ -1,0 +1,105 @@
+# Entrenamiento ColSign LSTM
+# Modelo: colsign_lstm_norm_estatic_45_154_v2
+# Fecha:  2026-06-01T10:01:33
+
+## Configuracion
+Dataset HDF5:        dataset_colsign_45_154.h5
+Sequence length:     45
+Num features:        225
+Normalize keypoints: True
+Drop pose visibility:True
+Num classes:         21
+Total samples:       586
+Train samples:       468
+Test  samples:       118
+Test size fraction:  0.2
+Split strategy:      estratificado por clase
+Random seed:         42
+Batch size:          64
+Epochs (config):     300
+Epochs (entrenadas): 106
+Learning rate inic:  0.001
+Dropout rate:        0.2
+Patience EarlyStop:  30
+Patience ReduceLR:   10
+Tiempo entrenamiento:39.5s (0.66 min)
+
+## Info adicional
+tipo: sub-modelo (clasifica seña específica)
+grupo_raiz: Grupo Estático
+modelo_raiz_padre: colsign_lstm_norm_raiz_45_154_v2
+clases_del_grupo: a, b, c, d, e, f, i, k, l, m, n, o, p, q, r, t, u, v, w, x, y
+
+## Arquitectura del modelo
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ lstm (LSTM)                          │ (None, 45, 128)             │         181,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 45, 128)             │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ lstm_1 (LSTM)                        │ (None, 64)                  │          49,408 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 (Dropout)                  │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │           8,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_2 (Dropout)                  │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 21)                  │           2,709 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 725,057 (2.77 MB)
+ Trainable params: 241,685 (944.08 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 483,372 (1.84 MB)
+
+
+## Metricas finales (modelo restaurado al mejor epoch)
+Train loss:     0.4589
+Train accuracy: 0.8611
+Test  loss:     1.3938
+Test  accuracy: 0.6441
+
+## Mejor epoch (segun val_loss)
+Epoch:           76
+Train loss:      0.7078
+Train accuracy:  0.7543
+Val   loss:      1.3938
+Val   accuracy:  0.6441
+
+## Classification report por clase (sobre conjunto de test)
+              precision    recall  f1-score   support
+
+           a     1.0000    0.4286    0.6000         7
+           b     0.6667    0.6667    0.6667         6
+           c     0.7500    1.0000    0.8571         6
+           d     0.5556    1.0000    0.7143         5
+           e     0.6000    0.5000    0.5455         6
+           f     0.6250    0.8333    0.7143         6
+           i     0.6667    0.4000    0.5000         5
+           k     1.0000    0.6667    0.8000         6
+           l     0.5000    0.6000    0.5455         5
+           m     0.6000    0.5000    0.5455         6
+           n     0.0000    0.0000    0.0000         5
+           o     0.5000    0.6000    0.5455         5
+           p     1.0000    0.8333    0.9091         6
+           q     0.8333    1.0000    0.9091         5
+           r     0.3750    0.6000    0.4615         5
+           t     0.6667    0.6667    0.6667         6
+           u     0.6000    0.5000    0.5455         6
+           v     0.7143    0.8333    0.7692         6
+           w     0.2500    0.2000    0.2222         5
+           x     0.5000    0.8333    0.6250         6
+           y     1.0000    0.8000    0.8889         5
+
+    accuracy                         0.6441       118
+   macro avg     0.6382    0.6410    0.6205       118
+weighted avg     0.6503    0.6441    0.6271       118
+
+## Archivos generados
+Modelo final:     models\colsign_lstm_norm_estatic_45_154_v2.keras
+Mejor checkpoint: models\colsign_lstm_norm_estatic_45_154_v2_best.keras
+Labels JSON:      info_models\colsign_lstm_norm_estatic_45_154_v2_labels.json
+Loss plot:        graphics\colsign_lstm_norm_estatic_45_154_v2_loss.jpeg
+Accuracy plot:    graphics\colsign_lstm_norm_estatic_45_154_v2_accuracy.jpeg

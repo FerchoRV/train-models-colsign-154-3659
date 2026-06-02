@@ -1,0 +1,44 @@
+{
+  "raiz": {
+    "model_name": "colsign_lstm_norm_raiz_45_154_v2",
+    "num_classes": 4,
+    "num_samples": 3659,
+    "epochs": 77,
+    "best_epoch": 47,
+    "train_loss": 0.014453842304646969,
+    "train_acc": 0.9959002137184143,
+    "test_loss": 0.1251915842294693,
+    "test_acc": 0.9699453711509705,
+    "duration_s": 146.98314690589905,
+    "log_path": "info_models\\colsign_lstm_norm_raiz_45_154_v2_train_log.txt",
+    "model_path": "models\\colsign_lstm_norm_raiz_45_154_v2.keras"
+  },
+  "Grupo Dinámico Unimanual": {
+    "model_name": "colsign_lstm_norm_unimanual_45_154_v2",
+    "num_classes": 64,
+    "num_samples": 1476,
+    "epochs": 112,
+    "best_epoch": 82,
+    "train_loss": 0.026535773649811745,
+    "train_acc": 0.998305082321167,
+    "test_loss": 0.6612465381622314,
+    "test_acc": 0.8648648858070374,
+    "duration_s": 91.67025923728943,
+    "log_path": "info_models\\colsign_lstm_norm_unimanual_45_154_v2_train_log.txt",
+    "model_path": "models\\colsign_lstm_norm_unimanual_45_154_v2.keras"
+  },
+  "Grupo Estático": {
+    "model_name": "colsign_lstm_norm_estatic_45_154_v2",
+    "num_classes": 21,
+    "num_samples": 586,
+    "epochs": 106,
+    "best_epoch": 76,
+    "train_loss": 0.45890915393829346,
+    "train_acc": 0.8611111044883728,
+    "test_loss": 1.3937751054763794,
+    "test_acc": 0.6440678238868713,
+    "duration_s": 39.524653911590576,
+    "log_path": "info_models\\colsign_lstm_norm_estatic_45_154_v2_train_log.txt",
+    "model_path": "models\\colsign_lstm_norm_estatic_45_154_v2.keras"
+  }
+}
