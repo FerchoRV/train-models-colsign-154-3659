@@ -1,0 +1,85 @@
+# Inferencia por segmentos colsign_lstm_norm_45_154
+# Fecha:    2026-06-08T22:51:27
+# Carpeta:  dataset_grup_sign
+# Modelo:   D:\Proyectos\Sistema ILSC\Entrenamiento_modelos_colsign\models\colsign_lstm_norm_45_154_best.keras
+# Segmento: 45 frames por lote (sin solapamiento)
+# Duración: 275.1s (4.59 min)
+
+## Resumen global
+Videos procesados:   18
+Segmentos predichos: 104
+Fallos de proceso:   0
+
+## Secuencia de señas detectadas por video
+
+- sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4  (4 segmentos)
+    secuencia: Por favor -> Amigo -> Aceptar -> Hablar
+    colapsada: Por favor -> Amigo -> Aceptar -> Hablar
+
+- sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4  (4 segmentos)
+    secuencia: Nosotros -> Nosotros -> Aceptar -> Lo siento
+    colapsada: Nosotros -> Aceptar -> Lo siento
+
+- sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4  (7 segmentos)
+    secuencia: Noche -> Noche -> Noche -> Noche -> Noche -> Noche -> Conocer
+    colapsada: Noche -> Conocer
+
+- sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4  (6 segmentos)
+    secuencia: Doler -> e -> Contento -> Cómo estás -> Pasear -> Lo siento
+    colapsada: Doler -> e -> Contento -> Cómo estás -> Pasear -> Lo siento
+
+- sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4  (4 segmentos)
+    secuencia: h -> No hay -> Aceptar -> Cómo estás
+    colapsada: h -> No hay -> Aceptar -> Cómo estás
+
+- sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4  (4 segmentos)
+    secuencia: r -> Conocer -> g -> g
+    colapsada: r -> Conocer -> g
+
+- sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4  (5 segmentos)
+    secuencia: Por favor -> No hay -> Aceptar -> Aceptar -> Aceptar
+    colapsada: Por favor -> No hay -> Aceptar
+
+- sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4  (3 segmentos)
+    secuencia: A veces -> A veces -> Lo siento
+    colapsada: A veces -> Lo siento
+
+- sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4  (5 segmentos)
+    secuencia: Aprender -> Buscar -> No hay -> Nosotros -> Lo siento
+    colapsada: Aprender -> Buscar -> No hay -> Nosotros -> Lo siento
+
+- sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4  (7 segmentos)
+    secuencia: Abandonar -> Noche -> Noche -> Jamás -> Abandonar -> p -> Algunos
+    colapsada: Abandonar -> Noche -> Jamás -> Abandonar -> p -> Algunos
+
+- sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4  (8 segmentos)
+    secuencia: Aprender -> Prohibir -> r -> k -> o -> j -> Tú -> o
+    colapsada: Aprender -> Prohibir -> r -> k -> o -> j -> Tú -> o
+
+- sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4  (7 segmentos)
+    secuencia: f -> Noche -> Conocer -> Noche -> Conocer -> Conocer -> a
+    colapsada: f -> Noche -> Conocer -> Noche -> Conocer -> a
+
+- sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4  (3 segmentos)
+    secuencia: Por qué -> Algunos -> Lo siento
+    colapsada: Por qué -> Algunos -> Lo siento
+
+- sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4  (6 segmentos)
+    secuencia: Por favor -> Lo siento -> z -> Mucho -> Aceptar -> Doler
+    colapsada: Por favor -> Lo siento -> z -> Mucho -> Aceptar -> Doler
+
+- sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4  (6 segmentos)
+    secuencia: Yo -> Ustedes -> No poder -> Usted -> Usted -> Yo
+    colapsada: Yo -> Ustedes -> No poder -> Usted -> Yo
+
+- sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4  (7 segmentos)
+    secuencia: a -> Noche -> Aburrido -> e -> Buscar -> t -> m
+    colapsada: a -> Noche -> Aburrido -> e -> Buscar -> t -> m
+
+- sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4  (11 segmentos)
+    secuencia: A veces -> Conocer -> Noche -> Lo siento -> Triste -> Lo siento -> Doler -> Apoyar -> Cerca -> Perdón -> Lo siento
+    colapsada: A veces -> Conocer -> Noche -> Lo siento -> Triste -> Lo siento -> Doler -> Apoyar -> Cerca -> Perdón -> Lo siento
+
+- sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4  (7 segmentos)
+    secuencia: Abuelo -> Buscar -> f -> e -> l -> z -> Lo siento
+    colapsada: Abuelo -> Buscar -> f -> e -> l -> z -> Lo siento

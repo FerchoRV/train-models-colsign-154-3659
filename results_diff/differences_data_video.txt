@@ -1,0 +1,140 @@
+==============================================================================
+DIFERENCIAS ENTRE VIDEOS DE ENTRENAMIENTO Y DE EVALUACIÓN
+==============================================================================
+Fecha:            2026-06-10T16:29:00
+Entrenamiento:    dataset_videos  (analizados 250 de 3659; fallidos 0)
+Evaluación:       dataset_videos_evaluate  (analizados 37 de 37; fallidos 0)
+Frames/video:     45 (muestreo uniforme)
+MediaPipe:        static_image_mode=True, model_complexity=1, min_detection_confidence=0.3
+Duración total:   850.3s (14.17 min)
+
+Nota: el signo del efecto es (train - eval). d>0 => el valor es MAYOR en entrenamiento.
+
+------------------------------------------------------------------------------
+HALLAZGOS PRINCIPALES (ordenados por tamaño de efecto |d|)
+------------------------------------------------------------------------------
+1. Tasa detección CUALQUIER mano [Detección]
+     train = 0.9834 (±0.0553)   eval = 0.6384 (±0.1994)
+     d = +3.93 (GRANDE) | eval es menor que train | Δrel = -35.1%
+2. Tasa detección mano DERECHA [Detección]
+     train = 0.9275 (±0.0706)   eval = 0.5790 (±0.1855)
+     d = +3.74 (GRANDE) | eval es menor que train | Δrel = -37.6%
+3. Tasa detección AMBAS manos [Detección]
+     train = 0.8434 (±0.2231)   eval = 0.2505 (±0.2878)
+     d = +2.55 (GRANDE) | eval es menor que train | Δrel = -70.3%
+4. Completitud de pose (visib.>0.5) [Encuadre/Distancia]
+     train = 0.7548 (±0.0346)   eval = 0.6408 (±0.0925)
+     d = +2.47 (GRANDE) | eval es menor que train | Δrel = -15.1%
+5. Tasa detección mano IZQUIERDA [Detección]
+     train = 0.8993 (±0.2312)   eval = 0.3099 (±0.3456)
+     d = +2.37 (GRANDE) | eval es menor que train | Δrel = -65.5%
+6. Posición vertical nariz (y norm.) [Encuadre/Distancia]
+     train = 0.2502 (±0.0639)   eval = 0.4021 (±0.1541)
+     d = -1.87 (GRANDE) | eval es mayor que train | Δrel = +60.7%
+
+------------------------------------------------------------------------------
+CONCLUSIÓN AUTOMÁTICA
+------------------------------------------------------------------------------
+La mayor diferencia entre datasets es una métrica de DETECCIÓN DE MANOS de MediaPipe, más baja en evaluación. Esto confirma que el cuello de botella es la dificultad de MediaPipe para detectar los puntos de control de las manos en los videos de usuarios nuevos, no el modelo de clasificación.
+
+Detección de manos más afectada: Tasa detección AMBAS manos -> train 84.3% vs eval 25.0%.
+
+Nota fps: el FPS reportado es NO fiable (mediana train 1000 / eval 1000; típicamente 1000). Es una corrupción de metadata COMPARTIDA por ambos datasets, así que no distingue train de eval; la duración basada en metadata no es comparable. Usar 'Nº de frames (medido)'.
+
+Nota (diagnóstico previo): ajustar parámetros de MediaPipe (mayor model_complexity, menor min_detection_confidence, upscaling, fallback con Hands) NO mejoró significativamente la detección de manos en estos videos, lo que refuerza que el problema es de captura/encuadre.
+
+------------------------------------------------------------------------------
+TABLA COMPLETA (media ± sd | mediana | d)
+------------------------------------------------------------------------------
+
+[Detección]
+  Tasa detección POSE                   
+     train:     1.0000 ± 0.0000    med    1.0000  (n=250)
+     eval :     1.0000 ± 0.0000    med    1.0000  (n=37)
+     d = +0.00 (mínimo)   Δrel = +0.0%
+  Tasa detección mano IZQUIERDA         
+     train:     0.8993 ± 0.2312    med    1.0000  (n=250)
+     eval :     0.3099 ± 0.3456    med    0.2889  (n=37)
+     d = +2.37 (GRANDE)   Δrel = -65.5%
+  Tasa detección mano DERECHA           
+     train:     0.9275 ± 0.0706    med    0.9333  (n=250)
+     eval :     0.5790 ± 0.1855    med    0.6000  (n=37)
+     d = +3.74 (GRANDE)   Δrel = -37.6%
+  Tasa detección CUALQUIER mano         
+     train:     0.9834 ± 0.0553    med    1.0000  (n=250)
+     eval :     0.6384 ± 0.1994    med    0.6222  (n=37)
+     d = +3.93 (GRANDE)   Δrel = -35.1%
+  Tasa detección AMBAS manos            
+     train:     0.8434 ± 0.2231    med    0.9111  (n=250)
+     eval :     0.2505 ± 0.2878    med    0.0667  (n=37)
+     d = +2.55 (GRANDE)   Δrel = -70.3%
+
+[Encuadre/Distancia]
+  Distancia inter-hombros (norm.)       
+     train:     0.2247 ± 0.0518    med    0.2148  (n=250)
+     eval :     0.2981 ± 0.0795    med    0.2647  (n=37)
+     d = -1.31 (GRANDE)   Δrel = +32.7%
+  Ancho bbox de pose (norm.)            
+     train:     0.3729 ± 0.0760    med    0.3589  (n=250)
+     eval :     0.4705 ± 0.1082    med    0.4541  (n=37)
+     d = -1.21 (GRANDE)   Δrel = +26.2%
+  Alto bbox de pose (norm.)             
+     train:     0.7134 ± 0.0525    med    0.7114  (n=250)
+     eval :     0.6452 ± 0.1629    med    0.6713  (n=37)
+     d = +0.90 (GRANDE)   Δrel = -9.6%
+  Área bbox de pose (norm.)             
+     train:     0.2671 ± 0.0698    med    0.2555  (n=250)
+     eval :     0.3085 ± 0.1218    med    0.2747  (n=37)
+     d = -0.53 (medio)   Δrel = +15.5%
+  Posición vertical hombros (y norm.)   
+     train:     0.4262 ± 0.0790    med    0.4182  (n=250)
+     eval :     0.5698 ± 0.1479    med    0.5505  (n=37)
+     d = -1.58 (GRANDE)   Δrel = +33.7%
+  Posición vertical nariz (y norm.)     
+     train:     0.2502 ± 0.0639    med    0.2407  (n=250)
+     eval :     0.4021 ± 0.1541    med    0.3767  (n=37)
+     d = -1.87 (GRANDE)   Δrel = +60.7%
+  Completitud de pose (visib.>0.5)      
+     train:     0.7548 ± 0.0346    med    0.7589  (n=250)
+     eval :     0.6408 ± 0.0925    med    0.6283  (n=37)
+     d = +2.47 (GRANDE)   Δrel = -15.1%
+
+[Calidad manos]
+  Fracción landmarks mano FUERA cuadro  
+     train:     0.0374 ± 0.0804    med    0.0000  (n=250)
+     eval :     0.0348 ± 0.0887    med    0.0057  (n=37)
+     d = +0.03 (mínimo)   Δrel = -6.8%
+  Fracción landmarks mano EN borde      
+     train:     0.0831 ± 0.1329    med    0.0000  (n=250)
+     eval :     0.0499 ± 0.1131    med    0.0108  (n=37)
+     d = +0.25 (pequeño)   Δrel = -40.0%
+
+[Metadatos]
+  Ancho del video (px)                  
+     train:   644.2800 ± 30.0201   med  640.0000  (n=250)
+     eval :   627.0270 ± 44.2760   med  640.0000  (n=37)
+     d = +0.54 (medio)   Δrel = -2.7%
+  Alto del video (px)                   
+     train:   479.9600 ± 0.2806    med  480.0000  (n=250)
+     eval :   492.9730 ± 44.2760   med  480.0000  (n=37)
+     d = -0.83 (GRANDE)   Δrel = +2.7%
+  Relación de aspecto (w/h)             
+     train:     1.3424 ± 0.0636    med    1.3333  (n=250)
+     eval :     1.2860 ± 0.1614    med    1.3333  (n=37)
+     d = +0.68 (medio)   Δrel = -4.2%
+  FPS reportado (corrupto ~1000)        
+     train:   788.8497 ± 398.4420  med 1000.0000  (n=250)
+     eval :   765.7611 ± 418.9077  med 1000.0000  (n=37)
+     d = +0.06 (mínimo)   Δrel = -2.9%
+  Nº de frames (reportado)              
+     train:  2670.3348 ± 958.5733  med 2960.0000  (n=221)
+     eval :  2343.8649 ± 1359.6904 med 2944.0000  (n=37)
+     d = +0.32 (pequeño)   Δrel = -12.2%
+  Nº de frames (medido, fiable)         
+     train:    91.1280 ± 14.1883   med   90.0000  (n=250)
+     eval :    93.2162 ± 21.0517   med   90.0000  (n=37)
+     d = -0.14 (mínimo)   Δrel = +2.3%
+  Duración (s, fps fiable)              
+     train:     2.9802 ± 0.4504    med    2.9600  (n=26)
+     eval :     3.4221 ± 0.8718    med    2.9967  (n=9)
+     d = -0.76 (medio)   Δrel = +14.8%

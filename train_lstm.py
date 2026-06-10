@@ -65,8 +65,9 @@ from src.utils import load_hdf5_dataset
 # =====================================================================
 
 DATASET_HDF5 = 'dataset_colsign_45_154.h5'
-MODEL_NAME   = 'colsign_lstm_norm_45_154'
-
+MODEL_NAME   = 'colsign_lstm_norm_45_154_aug'
+#DATASET_HDF5 = 'dataset_colsign_15_154.h5'
+#MODEL_NAME   = 'colsign_lstm_norm_15_154'
 # Preprocesamiento de features.
 # El HDF5 conserva los keypoints crudos (258 features). Para entrenar, usamos:
 #   - Normalización por frame: centro de hombros como origen y distancia entre
@@ -74,6 +75,30 @@ MODEL_NAME   = 'colsign_lstm_norm_45_154'
 #   - Sin visibility de pose: 258 -> 225 features.
 NORMALIZE_KEYPOINTS  = True
 DROP_POSE_VISIBILITY = True
+
+# ---------------------------------------------------------------------
+# Aumentación espacial al vuelo (SOLO en train).
+# ---------------------------------------------------------------------
+# Motivación: los videos de usuarios nuevos (dataset_videos_evaluate) están
+# más cerca de la cámara, con encuadre recortado, y MediaPipe pierde manos
+# en muchos frames (det mano izq ~31%, der ~58% vs ~88/92% en train).
+# Como los keypoints ya se normalizan por hombros, escalar/trasladar global
+# NO aporta (la normalización lo cancela). Lo que sí simula ese dominio y
+# sobrevive a la normalización:
+#   - rotación XY (inclinación de cámara/cuerpo),
+#   - escala anisotrópica + shear (perspectiva / cambio de aspecto),
+#   - jitter gaussiano (ruido de detección),
+#   - HAND DROPOUT: poner a cero una mano en tramos de frames para enseñar
+#     robustez ante manos faltantes (el modo de fallo real en evaluación).
+USE_AUGMENTATION          = True
+AUG_ROT_DEG               = 15.0    # rotación XY uniforme por clip: ±grados
+AUG_SCALE                 = 0.15    # escala anisotrópica: ±15% en x e y
+AUG_SHEAR                 = 0.10    # shear horizontal en función de y
+AUG_JITTER_STD            = 0.015   # ruido gaussiano (unidades de ancho-hombros)
+AUG_HAND_DROPOUT_P        = 0.50    # prob. de intentar dropout de una mano por clip
+AUG_HAND_DROPOUT_LEFT_BIAS = 0.65   # sesgo a soltar la mano izquierda (la que más falta)
+AUG_HAND_DROPOUT_MIN_OTHER = 0.30   # solo soltar una mano si la otra está en >=30% frames
+                                    # (protege señas estáticas de una sola mano)
 
 # Reproducibilidad
 SEED = 42
@@ -180,6 +205,91 @@ print(f"  Train: {X_train.shape}  Test: {X_test.shape}  ({split_strategy})")
 
 
 # =====================================================================
+# 3.5 Aumentación espacial (solo train, al vuelo)
+# =====================================================================
+#
+# Trabaja sobre los keypoints YA normalizados (T, 225): 75 landmarks * (x,y,z)
+#   - pose: índices  0..32
+#   - mano izquierda: 33..53
+#   - mano derecha:   54..74
+# Los landmarks no detectados son (0,0,0). Las transformaciones geométricas
+# son lineales, así que mapean el cero al cero (se preservan los faltantes);
+# el jitter solo se aplica a puntos detectados.
+
+_N_LANDMARKS = 75
+_LH = slice(33, 54)
+_RH = slice(54, 75)
+_EPS_AUG = 1e-6
+
+
+def _augment_one(seq, rng):
+    """Aumenta una secuencia (T, 225) y devuelve otra (T, 225) float32."""
+    T = seq.shape[0]
+    pts = seq.reshape(T, _N_LANDMARKS, 3).astype(np.float32).copy()
+
+    # --- Transformación geométrica (igual para todos los frames del clip) ---
+    theta = np.deg2rad(rng.uniform(-AUG_ROT_DEG, AUG_ROT_DEG))
+    c, s = np.cos(theta), np.sin(theta)
+    sx = rng.uniform(1.0 - AUG_SCALE, 1.0 + AUG_SCALE)
+    sy = rng.uniform(1.0 - AUG_SCALE, 1.0 + AUG_SCALE)
+    shear = rng.uniform(-AUG_SHEAR, AUG_SHEAR)
+
+    x = pts[:, :, 0].copy()
+    y = pts[:, :, 1].copy()
+    xr = c * x - s * y
+    yr = s * x + c * y
+    pts[:, :, 0] = xr * sx + shear * yr
+    pts[:, :, 1] = yr * sy
+
+    # --- Jitter gaussiano solo sobre puntos detectados ---
+    detected = (np.abs(pts).sum(axis=2, keepdims=True) > _EPS_AUG)
+    noise = rng.normal(0.0, AUG_JITTER_STD, size=pts.shape).astype(np.float32)
+    pts += noise * detected
+
+    # --- Hand dropout (simula manos no detectadas en encuadres cercanos) ---
+    if rng.random() < AUG_HAND_DROPOUT_P:
+        lh_pres = (np.abs(pts[:, _LH, :]).sum(axis=(1, 2)) > _EPS_AUG).mean()
+        rh_pres = (np.abs(pts[:, _RH, :]).sum(axis=(1, 2)) > _EPS_AUG).mean()
+        drop_left = rng.random() < AUG_HAND_DROPOUT_LEFT_BIAS
+        target = None
+        if drop_left and rh_pres >= AUG_HAND_DROPOUT_MIN_OTHER:
+            target = _LH
+        elif (not drop_left) and lh_pres >= AUG_HAND_DROPOUT_MIN_OTHER:
+            target = _RH
+        if target is not None:
+            frac = rng.uniform(0.4, 1.0)
+            span = max(1, int(round(frac * T)))
+            start = int(rng.integers(0, max(1, T - span + 1)))
+            pts[start:start + span, target, :] = 0.0
+
+    return pts.reshape(T, _N_LANDMARKS * 3).astype(np.float32)
+
+
+class AugmentedSequence(tf.keras.utils.Sequence):
+    """Entrega batches de train aumentados al vuelo, re-barajados por epoch."""
+
+    def __init__(self, X, y, batch_size, seed=SEED):
+        super().__init__()
+        self.X = X
+        self.y = y
+        self.bs = batch_size
+        self.rng = np.random.default_rng(seed)
+        self.indices = np.arange(len(X))
+        self.on_epoch_end()
+
+    def __len__(self):
+        return int(np.ceil(len(self.X) / self.bs))
+
+    def __getitem__(self, i):
+        ids = self.indices[i * self.bs:(i + 1) * self.bs]
+        Xb = np.stack([_augment_one(self.X[j], self.rng) for j in ids])
+        return Xb, self.y[ids]
+
+    def on_epoch_end(self):
+        self.rng.shuffle(self.indices)
+
+
+# =====================================================================
 # 4. Definir modelo
 # =====================================================================
 #
@@ -244,17 +354,30 @@ callbacks = [
 # =====================================================================
 
 print(f"\nEntrenando hasta {EPOCHS} epochs (early stopping patience={PATIENCE_EARLY})...")
+print(f"  Aumentación: {'ON' if USE_AUGMENTATION else 'OFF'}")
 t0 = time.time()
-history = model.fit(
-    X_train, y_train,
-    validation_data=(X_test, y_test),
-    epochs=EPOCHS,
-    batch_size=BATCH_SIZE,
-    callbacks=callbacks,
-    # verbose=2: una línea por epoch sin barra animada con caracteres
-    # Unicode. Mucho más limpio cuando se redirige stdout a un log.
-    verbose=2,
-)
+if USE_AUGMENTATION:
+    # La aumentación se aplica SOLO al train (validación queda limpia para
+    # medir generalización real). El Sequence re-baraja en cada epoch.
+    train_seq = AugmentedSequence(X_train, y_train, BATCH_SIZE, seed=SEED)
+    history = model.fit(
+        train_seq,
+        validation_data=(X_test, y_test),
+        epochs=EPOCHS,
+        callbacks=callbacks,
+        verbose=2,
+    )
+else:
+    history = model.fit(
+        X_train, y_train,
+        validation_data=(X_test, y_test),
+        epochs=EPOCHS,
+        batch_size=BATCH_SIZE,
+        callbacks=callbacks,
+        # verbose=2: una línea por epoch sin barra animada con caracteres
+        # Unicode. Mucho más limpio cuando se redirige stdout a un log.
+        verbose=2,
+    )
 train_duration = time.time() - t0
 print(f"\nEntrenamiento finalizado en {train_duration:.1f}s ({train_duration/60:.1f} min)")
 
@@ -349,6 +472,15 @@ with open(log_path, 'w', encoding='utf-8') as fp:
     fp.write(f"Dropout rate:        {DROPOUT_RATE}\n")
     fp.write(f"Patience EarlyStop:  {PATIENCE_EARLY}\n")
     fp.write(f"Patience ReduceLR:   {PATIENCE_LR}\n")
+    fp.write(f"Aumentacion:         {USE_AUGMENTATION}\n")
+    if USE_AUGMENTATION:
+        fp.write(f"  rot_deg:           {AUG_ROT_DEG}\n")
+        fp.write(f"  scale:             {AUG_SCALE}\n")
+        fp.write(f"  shear:             {AUG_SHEAR}\n")
+        fp.write(f"  jitter_std:        {AUG_JITTER_STD}\n")
+        fp.write(f"  hand_dropout_p:    {AUG_HAND_DROPOUT_P}\n")
+        fp.write(f"  hand_dropout_left: {AUG_HAND_DROPOUT_LEFT_BIAS}\n")
+        fp.write(f"  hand_dropout_min:  {AUG_HAND_DROPOUT_MIN_OTHER}\n")
     fp.write(f"Tiempo entrenamiento:{train_duration:.1f}s ({train_duration/60:.2f} min)\n\n")
 
     fp.write("## Arquitectura del modelo\n")

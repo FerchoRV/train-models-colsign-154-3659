@@ -1,0 +1,6 @@
+label,path,label_predicha,prob
+Abrazar,dataset_videos_evaluate\Abrazar\Abrazar_4c1ab065-0bee-45c5-a0ec-d2020d439d42.mp4,Abrazar,0.9998
+Esperar,dataset_videos_evaluate\Esperar\Esperar_3ed97411-1eac-4e07-a661-7fc163a88bc8.mp4,Cómo estás,0.8363
+Esperar,dataset_videos_evaluate\Esperar\Esperar_bd81a785-f3b8-4741-b297-d6f60042a3f7.mp4,Esperar,0.4047
+Radiografía,dataset_videos_evaluate\Radiografía\Radiografía_3a91aba0-c2e6-4129-a133-28a144b8ade5.mp4,Radiografía,0.8914
+Radiografía,dataset_videos_evaluate\Radiografía\Radiografía_b9ba91a8-a4e8-41bb-ac1c-d3abc1c1aadc.mp4,Deprimido,0.3007

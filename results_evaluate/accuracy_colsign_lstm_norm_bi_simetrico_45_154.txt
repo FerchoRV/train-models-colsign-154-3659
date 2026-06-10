@@ -1,0 +1,23 @@
+# Evaluación SUB-MODELO independiente: colsign_lstm_norm_bi_simetrico_45_154
+# Grupo:    Grupo Dinámico Bimanual Simétrico
+# Fecha:    2026-06-10T17:00:33
+# Carpeta:  dataset_videos_evaluate
+# Modelo:   D:\Proyectos\Sistema ILSC\Entrenamiento_modelos_colsign\models\colsign_lstm_norm_bi_simetrico_45_154_best.keras
+# Nota: solo se evalúan los videos cuya etiqueta pertenece al vocabulario de este sub-modelo (30 señas).
+
+## Resumen global
+Etiquetas:         3
+Total videos:      5
+Aciertos:          3
+Errores:           2
+Fallos de proceso: 0
+Accuracy:          0.6000  (60.00%)
+
+## Accuracy por clase
+label                                  ok total     acc
+--------------------------------------------------------
+Abrazar                                 1     1 100.00%
+Esperar                                 1     2  50.00%
+Radiografía                             1     2  50.00%
+--------------------------------------------------------
+TOTAL                                   3     5  60.00%

@@ -1,0 +1,41 @@
+# Evaluación de modelo colsign_lstm_norm_45_154_aug
+# Fecha:    2026-06-09T14:45:18
+# Carpeta:  dataset_videos_evaluate
+# Modelo:   D:\Proyectos\Sistema ILSC\Entrenamiento_modelos_colsign\models\colsign_lstm_norm_45_154_aug_best.keras
+# Duración: 106.4s (1.77 min)
+
+## Resumen global
+Etiquetas:         22
+Total videos:      37
+Aciertos:          5
+Errores:           32
+Fallos de proceso: 0
+Accuracy:          0.1351  (13.51%)
+
+## Accuracy por clase
+label                                  ok total     acc
+--------------------------------------------------------
+A veces                                 1     3  33.33%
+Abrazar                                 1     1 100.00%
+Adiós                                   0     1   0.00%
+Allá                                    0     1   0.00%
+Aprender                                0     1   0.00%
+Ayer                                    0     1   0.00%
+Buscar                                  0     1   0.00%
+Desmayarse                              1     1 100.00%
+Doler                                   0     3   0.00%
+Dudar                                   0     1   0.00%
+El                                      0     3   0.00%
+Esperar                                 0     2   0.00%
+Gracias                                 0     1   0.00%
+Interesar                               0     2   0.00%
+Molestar                                0     2   0.00%
+Otra vez                                1     1 100.00%
+Radiografía                             1     2  50.00%
+a                                       0     1   0.00%
+e                                       0     4   0.00%
+i                                       0     1   0.00%
+t                                       0     3   0.00%
+v                                       0     1   0.00%
+--------------------------------------------------------
+TOTAL                                   5    37  13.51%

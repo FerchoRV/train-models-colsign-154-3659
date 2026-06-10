@@ -1,0 +1,15 @@
+label,path,label_predicha,prob
+Adiós,dataset_videos_evaluate\Adiós\Adiós_ff8aa44b-8a77-4cb7-8bd8-1bce0676348f.mp4,ñ,0.8410
+Allá,dataset_videos_evaluate\Allá\Allá_ce8ddc6e-0a82-4956-89b9-24613f753ad5.mp4,Quién,0.9646
+Ayer,dataset_videos_evaluate\Ayer\Ayer_78c8c352-0669-4026-b792-ce0fb11d28da.mp4,Tener,0.4005
+Buscar,dataset_videos_evaluate\Buscar\Buscar_4db227c8-d842-4121-9998-3f13ae9b28ea.mp4,Nosotros,0.4286
+Desmayarse,dataset_videos_evaluate\Desmayarse\Desmayarse_2b1afe61-fca6-4f22-b281-bae196233ec9.mp4,Desmayarse,0.6912
+Doler,dataset_videos_evaluate\Doler\Doler_902e7d79-0cd6-4515-aa72-9eab85fa09a3.mp4,h,0.4604
+Doler,dataset_videos_evaluate\Doler\Doler_9484dceb-007c-448e-ac28-3fe4d750f574.mp4,h,0.4604
+Doler,dataset_videos_evaluate\Doler\Doler_ca2f46b4-dd5f-45e1-95af-ad7c25997067.mp4,h,0.4604
+Dudar,dataset_videos_evaluate\Dudar\Dudar_adf82949-d4c0-403e-99eb-df0f25e4aeeb.mp4,Dudar,0.7800
+El,dataset_videos_evaluate\El\El_61f25876-3dfd-4312-aaf6-ccce3c857869.mp4,Gustar,0.3920
+El,dataset_videos_evaluate\El\El_b9960e07-eff2-4872-9a6a-71ae61b62b96.mp4,Responder,0.9159
+El,dataset_videos_evaluate\El\El_ba0ce112-89c8-484b-a971-4c40bce650db.mp4,Qué paso,0.4970
+Interesar,dataset_videos_evaluate\Interesar\Interesar_8797060a-4cba-48bc-bee4-ca84cb791484.mp4,Qué paso,0.7763
+Interesar,dataset_videos_evaluate\Interesar\Interesar_d6a066ea-c5d5-47c4-b157-4ccc28120ba3.mp4,Acostumbrar,0.9044

@@ -1,0 +1,38 @@
+label,path,label_predicha,prob,grupo_raiz_real,grupo_raiz_predicho
+A veces,dataset_videos_evaluate\A veces\A veces_1962a15b-aae9-40b9-9933-1711ed089eac.mp4,Cómo estás,0.7325,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Bimanual Simétrico
+A veces,dataset_videos_evaluate\A veces\A veces_58b8ffe3-bf6b-42d2-9701-bb06bdc9b9ce.mp4,A veces,0.3126,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Bimanual Asimétrico
+A veces,dataset_videos_evaluate\A veces\A veces_b6e65697-49bc-4f5f-9cda-c7d079dcbcf7.mp4,Desconcertado,0.8345,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Bimanual Asimétrico
+Abrazar,dataset_videos_evaluate\Abrazar\Abrazar_4c1ab065-0bee-45c5-a0ec-d2020d439d42.mp4,Abrazar,0.9998,Grupo Dinámico Bimanual Simétrico,Grupo Dinámico Bimanual Simétrico
+Adiós,dataset_videos_evaluate\Adiós\Adiós_ff8aa44b-8a77-4cb7-8bd8-1bce0676348f.mp4,f,0.6043,Grupo Dinámico Unimanual,Grupo Estático
+Allá,dataset_videos_evaluate\Allá\Allá_ce8ddc6e-0a82-4956-89b9-24613f753ad5.mp4,Quién,0.9646,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+Aprender,dataset_videos_evaluate\Aprender\Aprender_4f3efbd1-71b4-4e6b-8192-ac0d4bbb6a71.mp4,Trabajar,0.9838,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Bimanual Simétrico
+Ayer,dataset_videos_evaluate\Ayer\Ayer_78c8c352-0669-4026-b792-ce0fb11d28da.mp4,Tener,0.4005,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+Buscar,dataset_videos_evaluate\Buscar\Buscar_4db227c8-d842-4121-9998-3f13ae9b28ea.mp4,Nosotros,0.4286,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+Desmayarse,dataset_videos_evaluate\Desmayarse\Desmayarse_2b1afe61-fca6-4f22-b281-bae196233ec9.mp4,Desmayarse,0.6912,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+Doler,dataset_videos_evaluate\Doler\Doler_902e7d79-0cd6-4515-aa72-9eab85fa09a3.mp4,Ignorar,0.6062,Grupo Dinámico Unimanual,Grupo Dinámico Bimanual Asimétrico
+Doler,dataset_videos_evaluate\Doler\Doler_9484dceb-007c-448e-ac28-3fe4d750f574.mp4,Ignorar,0.6062,Grupo Dinámico Unimanual,Grupo Dinámico Bimanual Asimétrico
+Doler,dataset_videos_evaluate\Doler\Doler_ca2f46b4-dd5f-45e1-95af-ad7c25997067.mp4,Ignorar,0.6062,Grupo Dinámico Unimanual,Grupo Dinámico Bimanual Asimétrico
+Dudar,dataset_videos_evaluate\Dudar\Dudar_adf82949-d4c0-403e-99eb-df0f25e4aeeb.mp4,Dudar,0.7800,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+El,dataset_videos_evaluate\El\El_61f25876-3dfd-4312-aaf6-ccce3c857869.mp4,Gustar,0.3920,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+El,dataset_videos_evaluate\El\El_b9960e07-eff2-4872-9a6a-71ae61b62b96.mp4,Responder,0.9159,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+El,dataset_videos_evaluate\El\El_ba0ce112-89c8-484b-a971-4c40bce650db.mp4,Qué paso,0.4970,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+Esperar,dataset_videos_evaluate\Esperar\Esperar_3ed97411-1eac-4e07-a661-7fc163a88bc8.mp4,Cómo estás,0.8363,Grupo Dinámico Bimanual Simétrico,Grupo Dinámico Bimanual Simétrico
+Esperar,dataset_videos_evaluate\Esperar\Esperar_bd81a785-f3b8-4741-b297-d6f60042a3f7.mp4,Esperar,0.4047,Grupo Dinámico Bimanual Simétrico,Grupo Dinámico Bimanual Simétrico
+Gracias,dataset_videos_evaluate\Gracias\Gracias_80bc8262-b43a-4cfe-ab2b-193472329802.mp4,Yo,0.9169,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Unimanual
+Interesar,dataset_videos_evaluate\Interesar\Interesar_8797060a-4cba-48bc-bee4-ca84cb791484.mp4,Qué paso,0.7763,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+Interesar,dataset_videos_evaluate\Interesar\Interesar_d6a066ea-c5d5-47c4-b157-4ccc28120ba3.mp4,Acostumbrar,0.9044,Grupo Dinámico Unimanual,Grupo Dinámico Unimanual
+Molestar,dataset_videos_evaluate\Molestar\Molestar_73b9b7b4-b40f-47a6-973e-86b42973e400.mp4,Defender,0.3644,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Bimanual Asimétrico
+Molestar,dataset_videos_evaluate\Molestar\Molestar_c33748e1-e0af-4dbc-bab1-8e4afcd33356.mp4,A veces,0.5153,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Bimanual Asimétrico
+Otra vez,dataset_videos_evaluate\Otra vez\Otra vez_ed17811c-541d-4944-bba5-e098a6233a77.mp4,Cuidar,0.7599,Grupo Dinámico Bimanual Asimétrico,Grupo Dinámico Bimanual Simétrico
+Radiografía,dataset_videos_evaluate\Radiografía\Radiografía_3a91aba0-c2e6-4129-a133-28a144b8ade5.mp4,Radiografía,0.8914,Grupo Dinámico Bimanual Simétrico,Grupo Dinámico Bimanual Simétrico
+Radiografía,dataset_videos_evaluate\Radiografía\Radiografía_b9ba91a8-a4e8-41bb-ac1c-d3abc1c1aadc.mp4,Deprimido,0.3007,Grupo Dinámico Bimanual Simétrico,Grupo Dinámico Bimanual Simétrico
+a,dataset_videos_evaluate\a\a_d8ae81e2-1d6c-4bf3-a0df-3e682dcf3406.mp4,e,0.3962,Grupo Estático,Grupo Estático
+e,dataset_videos_evaluate\e\e_78b081d4-1bd6-4874-abda-5c2f774d6c61.mp4,Adiós,0.4783,Grupo Estático,Grupo Dinámico Unimanual
+e,dataset_videos_evaluate\e\e_87177e84-ef38-4682-8a8f-cf65e9a4fdc6.mp4,Desmayarse,0.6889,Grupo Estático,Grupo Dinámico Unimanual
+e,dataset_videos_evaluate\e\e_ae06cd4c-a37e-42dd-9c1c-ba647119eee9.mp4,Por qué,0.4380,Grupo Estático,Grupo Dinámico Unimanual
+e,dataset_videos_evaluate\e\e_dbceb327-a4d7-42cc-adda-aef209de8b96.mp4,Por qué,0.4380,Grupo Estático,Grupo Dinámico Unimanual
+i,dataset_videos_evaluate\i\i_c1ec32a1-112f-4ef8-bb01-d9131cdba27d.mp4,r,0.4141,Grupo Estático,Grupo Estático
+t,dataset_videos_evaluate\t\t_10a4a9c4-7981-475a-af37-d2620c714f39.mp4,Aburrido,0.9090,Grupo Estático,Grupo Dinámico Unimanual
+t,dataset_videos_evaluate\t\t_2f513fb3-c35b-4f9b-86fb-395af69dff4d.mp4,Aburrido,0.9468,Grupo Estático,Grupo Dinámico Unimanual
+t,dataset_videos_evaluate\t\t_94d6a823-76cc-4314-ac6b-ae7e1b82960f.mp4,Buscar,0.7780,Grupo Estático,Grupo Dinámico Unimanual
+v,dataset_videos_evaluate\v\v_a4fc1a6f-5fd5-40cd-8a80-3ad161211558.mp4,d,0.1883,Grupo Estático,Grupo Estático

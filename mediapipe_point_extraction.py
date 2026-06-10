@@ -59,12 +59,13 @@ from src.utils import (
 # ---------------- configuración ----------------
 
 VIDEOS_PATH = 'dataset_videos'
-OUTPUT_HDF5 = 'dataset_colsign_45_154.h5'
+#OUTPUT_HDF5 = 'dataset_colsign_45_154.h5'
+OUTPUT_HDF5 = 'dataset_colsign_15_154.h5'
 
 # 45 frames distribuidos uniformemente con np.linspace.
 # A 45 frames sobre la parte útil del video (~3 s) → ~15 fps efectivos,
 # que es lo estándar en SLR con MediaPipe.
-SEQUENCE_LENGTH = 45
+SEQUENCE_LENGTH = 15
 
 # Recorte temporal de la cola del video:
 # si dura más de TRIM_THRESHOLD_S, se ignoran los últimos TRIM_TAIL_S

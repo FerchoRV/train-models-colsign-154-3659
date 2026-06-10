@@ -1,0 +1,25 @@
+# Diagnóstico MediaPipe: configuraciones de detección
+# Fecha:    2026-06-09T15:12:30
+# Dataset:  dataset_videos_evaluate
+# Videos:   37
+# Frames/video muestreados: 45
+# Duración: 1042.0s (17.37 min)
+
+## Promedio por configuración
+config                             pose     lh     rh    any   both  fb_any  comb_any
+---------------------------------------------------------------------------------------
+baseline_c1_conf03                1.000  0.310  0.579  0.638  0.250   0.000     0.638
+heavy_c2_conf03                   1.000  0.301  0.590  0.643  0.249   0.000     0.643
+heavy_c2_conf01                   1.000  0.301  0.587  0.641  0.247   0.000     0.641
+heavy_c2_conf01_up15              1.000  0.300  0.598  0.652  0.246   0.000     0.652
+heavy_c2_conf01_up15_handsfb      1.000  0.300  0.598  0.652  0.246   0.032     0.684
+
+## Lectura
+- `lh`/`rh`: fracción de frames con mano izquierda/derecha detectada por Holistic.
+- `any`: al menos una mano por Holistic.
+- `both`: ambas manos por Holistic.
+- `fb_any`: frames donde Holistic no vio manos, pero Hands standalone sí vio alguna.
+- `comb_any`: al menos una mano con Holistic o fallback Hands.
+
+Si `heavy/upscale/conf01` sube poco, Holistic no resolverá el dominio.
+Si `fb_any` sube bastante, conviene implementar fallback Hands en extracción + inferencia.

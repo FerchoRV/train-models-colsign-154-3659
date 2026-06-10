@@ -1,0 +1,70 @@
+# Inferencia ventana deslizante + confianza + NMS  colsign_lstm_norm_15_154
+# Fecha:      2026-06-09T08:05:26
+# Carpeta:    dataset_grup_sign
+# Modelo:     D:\Proyectos\Sistema ILSC\Entrenamiento_modelos_colsign\models\colsign_lstm_norm_15_154_best.keras
+# Ventana:    45 frames | stride 10 (solapamiento 35)
+# Confianza:  >= 0.65
+# NMS IoU:    > 0.3
+# Duración:   390.3s (6.50 min)
+
+## Resumen global
+Videos procesados:    18
+Ventanas evaluadas:   391
+Señas finales (NMS):  82
+Fallos de proceso:    0
+
+## Secuencia final de señas detectadas por video
+
+- sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4  (15 ventanas -> 3 señas)
+    secuencia: Por favor -> Lo siento -> Mucho
+
+- sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4  (13 ventanas -> 3 señas)
+    secuencia: g -> Aburrido -> Mucho
+
+- sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4  (27 ventanas -> 4 señas)
+    secuencia: Visitar -> Noche -> Deprimido -> Dudar
+
+- sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4  (23 ventanas -> 5 señas)
+    secuencia: Mas o menos -> Por qué -> Dónde -> Abrazar -> Perdón
+
+- sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4  (15 ventanas -> 5 señas)
+    secuencia: g -> Aburrido -> Decir -> Mucho -> Cómo estás
+
+- sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4  (16 ventanas -> 3 señas)
+    secuencia: Desmayarse -> Cansancio -> Lo siento
+
+- sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4  (20 ventanas -> 5 señas)
+    secuencia: Por favor -> Aburrido -> Decir -> Mucho -> Hablar
+
+- sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4  (8 ventanas -> 1 señas)
+    secuencia: A veces
+
+- sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4  (17 ventanas -> 4 señas)
+    secuencia: Olvidar -> Aburrido -> Grosero -> g
+
+- sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4  (27 ventanas -> 4 señas)
+    secuencia: A veces -> Deprimido -> A veces -> g
+
+- sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4  (34 ventanas -> 8 señas)
+    secuencia: Saber -> Lo siento -> k -> i -> o -> p -> j -> o
+
+- sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4  (27 ventanas -> 6 señas)
+    secuencia: a -> Visitar -> Dudar -> Deprimido -> Abandonar -> Visitar
+
+- sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4  (8 ventanas -> 1 señas)
+    secuencia: d
+
+- sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4  (21 ventanas -> 6 señas)
+    secuencia: Lo siento -> Por favor -> Decir -> Mucho -> Aceptar -> Hablar
+
+- sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4  (21 ventanas -> 3 señas)
+    secuencia: Usted -> A veces -> Mas o menos
+
+- sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4  (27 ventanas -> 5 señas)
+    secuencia: Preocupar -> Abuelo -> Aburrido -> Por qué -> j
+
+- sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4  (45 ventanas -> 10 señas)
+    secuencia: Preocupar -> A veces -> Abandonar -> Triste -> Lo siento -> Mas o menos -> Cómo estás -> Desconcertado -> Continuar -> Cómo estás
+
+- sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4  (27 ventanas -> 6 señas)
+    secuencia: Abuelo -> Por qué -> a -> l -> Decir -> Cómo estás

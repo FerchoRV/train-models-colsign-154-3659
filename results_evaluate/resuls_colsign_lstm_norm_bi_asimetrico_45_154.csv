@@ -1,0 +1,9 @@
+label,path,label_predicha,prob
+A veces,dataset_videos_evaluate\A veces\A veces_1962a15b-aae9-40b9-9933-1711ed089eac.mp4,Contento,0.9832
+A veces,dataset_videos_evaluate\A veces\A veces_58b8ffe3-bf6b-42d2-9701-bb06bdc9b9ce.mp4,A veces,0.3126
+A veces,dataset_videos_evaluate\A veces\A veces_b6e65697-49bc-4f5f-9cda-c7d079dcbcf7.mp4,Desconcertado,0.8345
+Aprender,dataset_videos_evaluate\Aprender\Aprender_4f3efbd1-71b4-4e6b-8192-ac0d4bbb6a71.mp4,A veces,0.9656
+Gracias,dataset_videos_evaluate\Gracias\Gracias_80bc8262-b43a-4cfe-ab2b-193472329802.mp4,Asistir,0.3394
+Molestar,dataset_videos_evaluate\Molestar\Molestar_73b9b7b4-b40f-47a6-973e-86b42973e400.mp4,Defender,0.3644
+Molestar,dataset_videos_evaluate\Molestar\Molestar_c33748e1-e0af-4dbc-bab1-8e4afcd33356.mp4,A veces,0.5153
+Otra vez,dataset_videos_evaluate\Otra vez\Otra vez_ed17811c-541d-4944-bba5-e098a6233a77.mp4,Contento,0.8226

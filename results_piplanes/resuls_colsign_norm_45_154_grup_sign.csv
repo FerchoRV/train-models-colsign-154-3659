@@ -1,0 +1,105 @@
+video,path,segment_idx,start_frame,end_frame,approx_start_s,n_frames,label_predicha,prob
+sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,dataset_grup_sign\sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,0,0,45,0.00,45,Por favor,0.6024
+sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,dataset_grup_sign\sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,1,45,90,1.50,45,Amigo,0.7068
+sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,dataset_grup_sign\sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,2,90,135,3.00,45,Aceptar,0.9231
+sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,dataset_grup_sign\sign-video-to-text_0db371b2-a749-47fd-ad7b-91661dab7c09.mp4,3,135,180,4.50,45,Hablar,0.7232
+sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,dataset_grup_sign\sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,0,0,45,0.00,45,Nosotros,0.8490
+sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,dataset_grup_sign\sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,1,45,90,1.50,45,Nosotros,0.7329
+sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,dataset_grup_sign\sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,2,90,135,3.00,45,Aceptar,0.5456
+sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,dataset_grup_sign\sign-video-to-text_1378e4d7-dc45-4149-8133-b4b13cbbd2d3.mp4,3,135,156,4.50,21,Lo siento,0.8628
+sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,dataset_grup_sign\sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,0,0,45,0.00,45,Noche,0.9540
+sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,dataset_grup_sign\sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,1,45,90,1.50,45,Noche,0.8331
+sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,dataset_grup_sign\sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,2,90,135,3.00,45,Noche,0.7941
+sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,dataset_grup_sign\sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,3,135,180,4.50,45,Noche,0.5604
+sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,dataset_grup_sign\sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,4,180,225,6.00,45,Noche,0.9575
+sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,dataset_grup_sign\sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,5,225,270,7.50,45,Noche,0.5450
+sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,dataset_grup_sign\sign-video-to-text_139e2efc-a52b-4a5c-8c26-cccdea413ec9.mp4,6,270,300,9.00,30,Conocer,0.4500
+sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,dataset_grup_sign\sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,0,0,45,0.00,45,Doler,0.2473
+sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,dataset_grup_sign\sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,1,45,90,1.50,45,e,0.4814
+sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,dataset_grup_sign\sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,2,90,135,3.00,45,Contento,0.5001
+sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,dataset_grup_sign\sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,3,135,180,4.50,45,Cómo estás,0.9746
+sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,dataset_grup_sign\sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,4,180,225,6.00,45,Pasear,0.8620
+sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,dataset_grup_sign\sign-video-to-text_28348691-88e8-41f6-aba4-1c4f882e04d5.mp4,5,225,256,7.50,31,Lo siento,0.9452
+sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,dataset_grup_sign\sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,0,0,45,0.00,45,h,0.6444
+sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,dataset_grup_sign\sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,1,45,90,1.50,45,No hay,0.3348
+sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,dataset_grup_sign\sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,2,90,135,3.00,45,Aceptar,0.8316
+sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,dataset_grup_sign\sign-video-to-text_2c6ffabc-cd37-40d2-9a55-f81922b88830.mp4,3,135,180,4.50,45,Cómo estás,0.9780
+sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,dataset_grup_sign\sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,0,0,45,0.00,45,r,0.7600
+sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,dataset_grup_sign\sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,1,45,90,1.50,45,Conocer,0.7052
+sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,dataset_grup_sign\sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,2,90,135,3.00,45,g,0.9839
+sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,dataset_grup_sign\sign-video-to-text_35e98ee1-8ab5-421e-a41d-722540229c86.mp4,3,135,180,4.50,45,g,0.9539
+sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,dataset_grup_sign\sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,0,0,45,0.00,45,Por favor,0.8949
+sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,dataset_grup_sign\sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,1,45,90,1.50,45,No hay,0.2090
+sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,dataset_grup_sign\sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,2,90,135,3.00,45,Aceptar,0.9179
+sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,dataset_grup_sign\sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,3,135,180,4.50,45,Aceptar,0.9644
+sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,dataset_grup_sign\sign-video-to-text_50b5a3c6-82bd-4a2a-b21e-c4bb39834c61.mp4,4,180,225,6.00,45,Aceptar,0.8191
+sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4,dataset_grup_sign\sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4,0,0,45,0.00,45,A veces,0.6957
+sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4,dataset_grup_sign\sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4,1,45,90,1.50,45,A veces,0.5874
+sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4,dataset_grup_sign\sign-video-to-text_6fe6b912-389f-4ff3-b335-b6cd2660cc36.mp4,2,90,106,3.00,16,Lo siento,0.4554
+sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,dataset_grup_sign\sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,0,0,45,0.00,45,Aprender,0.9945
+sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,dataset_grup_sign\sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,1,45,90,1.50,45,Buscar,0.9575
+sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,dataset_grup_sign\sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,2,90,135,3.00,45,No hay,0.9964
+sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,dataset_grup_sign\sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,3,135,180,4.50,45,Nosotros,0.9074
+sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,dataset_grup_sign\sign-video-to-text_72351995-77c3-45c4-b7cd-8826da5dd9bf.mp4,4,180,198,6.00,18,Lo siento,0.6358
+sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,dataset_grup_sign\sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,0,0,45,0.00,45,Abandonar,0.5112
+sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,dataset_grup_sign\sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,1,45,90,1.50,45,Noche,0.9415
+sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,dataset_grup_sign\sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,2,90,135,3.00,45,Noche,0.9352
+sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,dataset_grup_sign\sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,3,135,180,4.50,45,Jamás,0.5226
+sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,dataset_grup_sign\sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,4,180,225,6.00,45,Abandonar,0.9351
+sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,dataset_grup_sign\sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,5,225,270,7.50,45,p,0.2565
+sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,dataset_grup_sign\sign-video-to-text_76f927c3-c88c-44bc-b996-fa8dd881a556.mp4,6,270,299,9.00,29,Algunos,0.6986
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,0,0,45,0.00,45,Aprender,0.9836
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,1,45,90,1.50,45,Prohibir,0.5757
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,2,90,135,3.00,45,r,0.1379
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,3,135,180,4.50,45,k,0.6707
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,4,180,225,6.00,45,o,0.5195
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,5,225,270,7.50,45,j,0.9873
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,6,270,315,9.00,45,Tú,0.6935
+sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,dataset_grup_sign\sign-video-to-text_87cf0dd9-fac8-4c63-b086-145e38f43bd3.mp4,7,315,360,10.50,45,o,0.9965
+sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,dataset_grup_sign\sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,0,0,45,0.00,45,f,0.7043
+sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,dataset_grup_sign\sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,1,45,90,1.50,45,Noche,0.5316
+sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,dataset_grup_sign\sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,2,90,135,3.00,45,Conocer,0.6036
+sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,dataset_grup_sign\sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,3,135,180,4.50,45,Noche,0.7964
+sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,dataset_grup_sign\sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,4,180,225,6.00,45,Conocer,0.8083
+sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,dataset_grup_sign\sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,5,225,270,7.50,45,Conocer,0.7004
+sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,dataset_grup_sign\sign-video-to-text_961ab2c5-c678-4535-aa9e-98b7e4b1efc8.mp4,6,270,300,9.00,30,a,0.3870
+sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4,dataset_grup_sign\sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4,0,0,45,0.00,45,Por qué,0.8119
+sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4,dataset_grup_sign\sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4,1,45,90,1.50,45,Algunos,0.2422
+sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4,dataset_grup_sign\sign-video-to-text_b4635d3a-6137-4234-ae7d-b093eb9c5da0.mp4,2,90,115,3.00,25,Lo siento,0.3423
+sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,dataset_grup_sign\sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,0,0,45,0.00,45,Por favor,0.7257
+sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,dataset_grup_sign\sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,1,45,90,1.50,45,Lo siento,0.4392
+sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,dataset_grup_sign\sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,2,90,135,3.00,45,z,0.2805
+sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,dataset_grup_sign\sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,3,135,180,4.50,45,Mucho,0.9892
+sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,dataset_grup_sign\sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,4,180,225,6.00,45,Aceptar,0.6781
+sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,dataset_grup_sign\sign-video-to-text_b778ee52-024f-42a1-b501-cf3374a093b4.mp4,5,225,242,7.50,17,Doler,0.4439
+sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,dataset_grup_sign\sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,0,0,45,0.00,45,Yo,0.9802
+sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,dataset_grup_sign\sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,1,45,90,1.50,45,Ustedes,0.4645
+sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,dataset_grup_sign\sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,2,90,135,3.00,45,No poder,0.2539
+sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,dataset_grup_sign\sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,3,135,180,4.50,45,Usted,0.9714
+sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,dataset_grup_sign\sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,4,180,225,6.00,45,Usted,0.9521
+sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,dataset_grup_sign\sign-video-to-text_b793bd0b-69c9-4a72-8f30-8176112c2151.mp4,5,225,244,7.50,19,Yo,0.9793
+sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,dataset_grup_sign\sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,0,0,45,0.00,45,a,0.5301
+sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,dataset_grup_sign\sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,1,45,90,1.50,45,Noche,0.3419
+sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,dataset_grup_sign\sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,2,90,135,3.00,45,Aburrido,0.4622
+sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,dataset_grup_sign\sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,3,135,180,4.50,45,e,0.2849
+sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,dataset_grup_sign\sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,4,180,225,6.00,45,Buscar,0.8640
+sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,dataset_grup_sign\sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,5,225,270,7.50,45,t,0.3307
+sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,dataset_grup_sign\sign-video-to-text_d19deb65-81ef-4ece-a571-321c1b6bc5ba.mp4,6,270,300,9.00,30,m,0.4161
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,0,0,45,0.00,45,A veces,0.9963
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,1,45,90,1.50,45,Conocer,0.4644
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,2,90,135,3.00,45,Noche,0.9238
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,3,135,180,4.50,45,Lo siento,0.3476
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,4,180,225,6.00,45,Triste,0.9397
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,5,225,270,7.50,45,Lo siento,0.2838
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,6,270,315,9.00,45,Doler,0.3594
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,7,315,360,10.50,45,Apoyar,0.8132
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,8,360,405,12.00,45,Cerca,0.4310
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,9,405,450,13.50,45,Perdón,0.7061
+sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,dataset_grup_sign\sign-video-to-text_df5ac2d8-fa45-4293-9589-82434374e98c.mp4,10,450,481,15.00,31,Lo siento,0.3937
+sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,dataset_grup_sign\sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,0,0,45,0.00,45,Abuelo,0.9675
+sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,dataset_grup_sign\sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,1,45,90,1.50,45,Buscar,0.9905
+sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,dataset_grup_sign\sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,2,90,135,3.00,45,f,0.5412
+sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,dataset_grup_sign\sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,3,135,180,4.50,45,e,0.4706
+sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,dataset_grup_sign\sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,4,180,225,6.00,45,l,0.3269
+sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,dataset_grup_sign\sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,5,225,270,7.50,45,z,0.9968
+sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,dataset_grup_sign\sign-video-to-text_fec30fbd-cc82-48e9-9f59-577ff54008ff.mp4,6,270,300,9.00,30,Lo siento,0.6074

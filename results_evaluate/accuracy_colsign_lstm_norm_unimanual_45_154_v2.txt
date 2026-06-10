@@ -1,0 +1,29 @@
+# Evaluación SUB-MODELO independiente: colsign_lstm_norm_unimanual_45_154_v2
+# Grupo:    Grupo Dinámico Unimanual
+# Fecha:    2026-06-10T17:00:33
+# Carpeta:  dataset_videos_evaluate
+# Modelo:   D:\Proyectos\Sistema ILSC\Entrenamiento_modelos_colsign\models\colsign_lstm_norm_unimanual_45_154_v2_best.keras
+# Nota: solo se evalúan los videos cuya etiqueta pertenece al vocabulario de este sub-modelo (64 señas).
+
+## Resumen global
+Etiquetas:         9
+Total videos:      14
+Aciertos:          2
+Errores:           12
+Fallos de proceso: 0
+Accuracy:          0.1429  (14.29%)
+
+## Accuracy por clase
+label                                  ok total     acc
+--------------------------------------------------------
+Adiós                                   0     1   0.00%
+Allá                                    0     1   0.00%
+Ayer                                    0     1   0.00%
+Buscar                                  0     1   0.00%
+Desmayarse                              1     1 100.00%
+Doler                                   0     3   0.00%
+Dudar                                   1     1 100.00%
+El                                      0     3   0.00%
+Interesar                               0     2   0.00%
+--------------------------------------------------------
+TOTAL                                   2    14  14.29%
